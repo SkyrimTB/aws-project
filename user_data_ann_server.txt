@@ -1,0 +1,10 @@
+#!/bin/bash
+aws s3 cp s3://mpcs-cc-students/zehaoz/gas_ann_server.zip /home/ec2-user/mpcs-cc
+unzip /home/ec2-user/mpcs-cc/gas_ann_server.zip -d /home/ec2-user/mpcs-cc/gas
+chown -R ec2-user:ec2-user /home/ec2-user/mpcs-cc/gas
+aws s3 cp s3://mpcs-cc-resources/ssl/privkey.pem /home/ec2-user/mpcs-cc
+aws s3 cp s3://mpcs-cc-resources/ssl/fullchain.pem /home/ec2-user/mpcs-cc
+source /home/ec2-user/mpcs-cc/bin/activate
+cd /home/ec2-user/mpcs-cc/gas/ann
+chmod +x /home/ec2-user/mpcs-cc/gas/ann/run_ann.sh
+/home/ec2-user/mpcs-cc/gas/ann/run_ann.sh
