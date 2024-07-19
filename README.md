@@ -6,6 +6,7 @@ Directory contents are as follows:
 * `/ann` - Annotator files
 * `/util` - Utility scripts for notifications, archival, and restoration
 * `/aws` - AWS user data files
+![alt text](GAS-framework.png)
 
 ## Archive Process
 
